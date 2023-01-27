@@ -39,8 +39,6 @@ main {
 }
 
 .navbar {
-    width: 4rem;
-    height: 100vh;
     position: fixed;
     background-color: var(--bg-primary);
     transition: width 200ms ease;
@@ -92,13 +90,9 @@ main {
     color: var(--svg-prim);
 }
 
-.navbar:hover {
-    width: 16rem;
-}
 
-.navbar:hover .link-text {
-    display: block;
-}
+
+
 
 .logo {
     font-weight: bold;
@@ -113,11 +107,48 @@ main {
     width: 100%;
 }
 
-.logo svg {
+.logo i {
     transform: rotate(0deg);
-    transition: transform 600ms;
+    transition: transform 800ms 
+
 }
 
-.navbar:hover .logo svg {
-    transform: rotate(-180deg);
+.navbar:hover .logo i {
+    transform: rotate(360deg);
+}
+/* Small Screen */
+@media only screen and (max-width: 600px) {
+    .navbar {
+        bottom: 0;
+        width: 100vw;
+        height: 5rem;
+    }
+    .logo {
+        display: none;
+    }
+    .navbar-nav {
+        flex-direction: row;
+
+    }
+
+    .nav-link {
+        justify-content: center;
+    }
+}
+
+/* Big Screen */
+@media only screen and (min-width: 600px) {
+    .navbar {
+        top: 0;
+        width: 4rem;
+        height: 100vh;
+    }
+
+    .navbar:hover {
+        width: 16rem;
+    }
+
+    .navbar:hover .link-text {
+        display: block;
+    }
 }
