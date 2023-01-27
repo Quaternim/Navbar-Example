@@ -3,11 +3,15 @@
     font-family: 'Roboto';
     --text-primary: #b6b6b6;
     --text-seccondary: #ececec;
+    --text-tertiary: #f7f7f7;
     --bg-primary: #23232e;
     --bg-seccondary: #141418;
+    --bg-tertiary: #0c0c0f;
 
     --black1: #1e1e24;
     --purple1: #6649b8;
+    --otto1: #F69766;
+    --otto2: #ffdcc8;
 
     --svg-prim: #ff7eee;
     --svg-secc: #df49a6;
@@ -27,12 +31,15 @@ body::-webkit-scrollbar-thumb {
 }
 
 body {
-    color: black;
-    background-color: white;
+    color: var(--text-seccondary);
+    background-color: var(--bg-tertiary);
     margin: 0;
     padding: 0;
 }
 
+h1 {
+    color: var(--otto1);
+}
 main {
     margin-left: 5rem;
     padding: 1rem;
@@ -42,6 +49,7 @@ main {
     position: fixed;
     background-color: var(--bg-primary);
     transition: width 200ms ease;
+    font-size: 1.5rem;
 }
 
 .navbar-nav {
@@ -80,13 +88,15 @@ main {
 .link-text {
     display: none;
     margin-left: 1rem;
+    text-transform: uppercase;
+
 }
 
 
 .nav-link i {
     width: 2rem;
     min-width: 2rem;
-    margin: 0 1.5rem;
+    margin-left: 1.5rem;
     color: var(--svg-prim);
 }
 
@@ -134,13 +144,17 @@ main {
     .nav-link {
         justify-content: center;
     }
+
+    main {
+        margin: 0;
+    }
 }
 
 /* Big Screen */
 @media only screen and (min-width: 600px) {
     .navbar {
         top: 0;
-        width: 4rem;
+        width: 5rem;
         height: 100vh;
     }
 
